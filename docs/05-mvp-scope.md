@@ -1,5 +1,24 @@
 # MVP 범위
 
+## 구현 현황 (2026-05-19)
+
+| # | Must 항목 | 상태 | 비고 |
+|---|-----------|------|------|
+| 1 | World 1 스테이지 4–7+ 실문항·언락 | **완료** | 맵 20스테이지, 스테이지당 pick/blank 매핑 ([algofit-mobile#4](https://github.com/algorithm-learning-app/algofit-mobile/pull/4)) |
+| 2 | World 2 셸 (3–5+ 스테이지) | **부분** | 5스테이지(stack/BFS), W1 7클리어 시 언락 |
+| 3 | Algorithm 6종 + 진행 % | **완료** | 카탈로그·상세, `clearedQuestionIds` 기반 |
+| 4 | 복습 탭 (오답 큐) | **완료** | Daily/World 오답 → `wrongQuestionIds` |
+| 5 | bundled pick≥15, blank≥10 | **부분** | 현재 pick 15 / blank 11 (Must 50/30 미달) |
+| 6 | 게스트 world·algorithm 진행 저장 | **완료** | schema v3, SharedPreferences |
+| 7 | PC Daily 풀 동기·시드 | **완료** | [algofit-web#1](https://github.com/algorithm-learning-app/algofit-web/pull/1) |
+| 8 | PC `/continue?token=` | **완료** | guestId ↔ localStorage 브릿지 (MVP) |
+| 9 | PC 홈 모바일 핸드오프 | **완료** | guestId + continue 링크 |
+| 10 | 문서·content 동기 | **부분** | `content/questions` 풀 동기, 본 표 유지 |
+
+**미완 Must (v1.0 전)**: 콘텐츠 50/30, 뱃지 5–8, World2 10–15스테이지, 서버 동기화, `scenario_map`.
+
+---
+
 ## Must (출시 차단 기준)
 
 | 영역 | 내용 |
@@ -78,6 +97,6 @@
 ## 완료 정의 (MVP Done)
 
 1. 신규 사용자가 게스트로 **일일 챌린지 1회** 완료하고 스트릭이 기록된다.
-2. World 1 스테이지 1→3 진행이 가능하다.
+2. World 1 스테이지 1→20 맵·언락 체인으로 진행이 가능하다.
 3. Pick·Blank 각 1문항이 스키마대로 로드·채점된다. (`scenario_map`은 Should 완료 시 4번 항목으로 승격 가능)
 4. 앱 재실행 후 XP·진행이 유지된다.
