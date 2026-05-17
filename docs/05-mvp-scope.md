@@ -100,3 +100,20 @@
 2. World 1 스테이지 1→20 맵·언락 체인으로 진행이 가능하다.
 3. Pick·Blank 각 1문항이 스키마대로 로드·채점된다. (`scenario_map`은 Should 완료 시 4번 항목으로 승격 가능)
 4. 앱 재실행 후 XP·진행이 유지된다.
+
+## 구현 상태 (2026-05-19)
+
+| # | Must 항목 | 상태 | PR / 비고 |
+|---|-----------|------|-----------|
+| — | Daily 5문항·홈·pick/blank 풀·서울 날짜 시드 | ✅ | [algofit-mobile#2](https://github.com/algorithm-learning-app/algofit-mobile/pull/2), [#3](https://github.com/algorithm-learning-app/algofit-mobile/pull/3) |
+| 1 | World 1 스테이지 4–20 (콘텐츠 매핑) | ✅ | [algofit-mobile#4](https://github.com/algorithm-learning-app/algofit-mobile/pull/4) — 맵 20스테이지, placeholder 없음 |
+| 2 | World 2 최소 (3–5 스테이지) | ✅ | #4 — 5스테이지, 7클리어 시 해금 |
+| 3 | Algorithm 6패턴·목록·상세·진행 % | ✅ | #4 |
+| 4 | Review 탭 (세션 오답) | ✅ | #4 |
+| 5 | pick.json 15+ / blank.json 10+ | 🟡 | #4 — 번들 15 pick / 11 blank (`content/questions` 동기화). Must 목표 50/30은 미달 |
+| 6 | Web Daily 동일 풀·서울 시드 | ✅ | [algofit-web#1](https://github.com/algorithm-learning-app/algofit-web/pull/1) |
+| 7 | Web `/continue` 토큰 handoff | ✅ | algofit-web#1 |
+| 8 | `content/questions` 문항 확장 | 🟡 | [algofit-docs](https://github.com/algorithm-learning-app/algofit-docs) — 모바일 번들과 동기화(15/11), Must 50/30 전량은 후속 |
+| 9 | 본 문서 구현 상태 표 | ✅ | 이 표 |
+
+**미완 Must 후속**: 콘텐츠 50/30 전량, 게스트 서버 동기화, 뱃지 5–8개, World 2 10–15스테이지 확장(Should와 겹침).
