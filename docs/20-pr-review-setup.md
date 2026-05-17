@@ -2,13 +2,15 @@
 
 GitHub Actions 대신 **로컬에서 검증한 뒤** Codex 스킬이 PR에 코멘트를 남기는 방식입니다. 저장소마다 `PR_REVIEW_CHECK_COMMAND`로 빌드·테스트·콘텐츠 검증을 지정합니다.
 
-## 저장소별 PR / main 현황 (2026-05-18 기준)
+## 저장소별 PR / main 현황 (2026-05-17 기준)
 
-| 저장소 | GitHub | PR | 비고 |
-|--------|--------|-----|------|
-| [algofit-mobile](https://github.com/algorithm-learning-app/algofit-mobile) | `apps/mobile` 동기화 | **가능** — `feat/world-1-map` 브랜치에 World 1 맵 작업 | 유일하게 feature PR이 열릴 수 있는 앱 |
-| [algofit-web](https://github.com/algorithm-learning-app/algofit-web) | `apps/web` 동기화 | **없음** — `main`에 직접 푸시 | PC 웹·Daily·PC 보너스 |
-| [algofit-docs](https://github.com/algorithm-learning-app/algofit-docs) | 루트 `docs/` + `content/` | **없음** — `main`에 직접 푸시 | 기획·스펙·JSON 콘텐츠 |
+| 저장소 | GitHub `main` | 로컬 | PR 정책 |
+|--------|---------------|------|---------|
+| [algofit-mobile](https://github.com/algorithm-learning-app/algofit-mobile) | `3d718ea` (PR #1 머지됨) | `apps/mobile/` | **feature 브랜치 + PR** |
+| [algofit-web](https://github.com/algorithm-learning-app/algofit-web) | `767cd9e` | `apps/web/` | **feature 브랜치 + PR** (앞으로 `main` 직접 푸시 금지) |
+| [algofit-docs](https://github.com/algorithm-learning-app/algofit-docs) | `b5a8a95` | `docs/` · `content/` · `scripts/` | **feature 브랜치 + PR** |
+
+Git 브랜치·머지 절차: [21-git-workflow.md](21-git-workflow.md).
 
 모노레포(`algorithm-training`)는 통합 작업 공간이며, 원격 푸시는 위 세 저장소로 나뉩니다.
 
@@ -62,26 +64,24 @@ python3 ~/.codex/skills/gh-review-pr/scripts/review_pr.py --pr-url 1
 python3 ~/.codex/skills/gh-review-pr/scripts/review_pr.py --pr-url 1 --dry-run
 ```
 
-### 3) PR 생성 직후 (mobile feature 브랜치 예시)
+### 3) PR 생성 직후 (feature 브랜치 예시)
 
 ```bash
-git checkout feat/world-1-map
-git push -u origin feat/world-1-map
-gh pr create --base main --title "feat(world): World 1 map and stage routes" --body "..."
-# create_pr 스킬을 쓰면 리뷰 훅이 자동 실행됨
+git checkout -b feat/my-change
+# … 커밋 …
+git push -u origin feat/my-change
+gh pr create --base main --title "feat(scope): …" --body "…"
 export PR_REVIEW_CHECK_COMMAND="$(git rev-parse --show-toplevel)/scripts/pr-review-check.sh"
+./scripts/pr-review-check.sh
 python3 ~/.codex/skills/gh-review-pr/scripts/review_pr.py --pr-url <PR_URL>
 ```
 
-### 4) main만 쓰는 저장소 (web / docs)
-
-PR이 없어도 로컬에서 검증만 돌릴 수 있습니다:
+### 4) `main`에서 검증만 (머지 후 smoke)
 
 ```bash
+git checkout main && git pull
 ./scripts/pr-review-check.sh
 ```
-
-나중에 PR을 열면 동일한 `PR_REVIEW_CHECK_COMMAND`를 export한 뒤 `review_pr.py`를 호출하면 됩니다.
 
 ## 관련 환경 변수 (요약)
 
