@@ -203,11 +203,13 @@
 ```
 content/
   questions/
-    pick/
-    blank/
-    scenario/
+    pick.json          # 또는 pick/ 패턴별 분리
+    blank.json
+    scenario.json      # Should
   worlds/
     world_1.json
   daily/
     manifest.json
 ```
+
+제작 절차·QA: [19-content-authoring.md](19-content-authoring.md). 모바일·PC 앱은 빌드 시 이 경로의 JSON을 번들로 가져온다 ([13-tech-architecture.md](13-tech-architecture.md) §5).

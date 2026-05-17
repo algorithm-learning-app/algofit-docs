@@ -20,6 +20,7 @@
 | [06-content-schema.md](06-content-schema.md) | Pick/Blank/**scenario_map** JSON 스키마 및 예시 (필드명 영문) |
 | [07-curriculum-world-1.md](07-curriculum-world-1.md) | World 1 스테이지 ~20개, 패턴 태그 |
 | [08-sample-questions.md](08-sample-questions.md) | 샘플 Pick 5 + Blank 5 + Scenario 3 (전체 필드) |
+| [19-content-authoring.md](19-content-authoring.md) | Pick/Blank/시나리오 작성법, QA 체크리스트, `content/` 배치 |
 
 ## UX·운영
 
@@ -49,7 +50,7 @@
 
 1. [01-product-vision](01-product-vision.md) → [02-core-learning-loop](02-core-learning-loop.md)
 2. [05-mvp-scope](05-mvp-scope.md) → [03-content-types](03-content-types.md) → [12-real-world-scenarios](12-real-world-scenarios.md)
-3. [06-content-schema](06-content-schema.md) → [08-sample-questions](08-sample-questions.md)
+3. [06-content-schema](06-content-schema.md) → [08-sample-questions](08-sample-questions.md) → [19-content-authoring](19-content-authoring.md)
 4. [09-ia-screens](09-ia-screens.md) → [07-curriculum-world-1](07-curriculum-world-1.md)
 5. [14-learning-flow](14-learning-flow.md) → [16-algofit-figma-brief](16-algofit-figma-brief.md) (UI)
 6. [13-tech-architecture](13-tech-architecture.md) → [18-stack-decision](18-stack-decision.md) → [17-dev-setup](17-dev-setup.md)
@@ -63,6 +64,6 @@
 | [14-learning-flow.md](14-learning-flow.md) | 플랫폼·스트릭·Algofit 협의 확정 | ✅ |
 | [15-figma-mcp-setup.md](15-figma-mcp-setup.md) | Figma MCP (Cursor) | ✅ |
 | [16-algofit-figma-brief.md](16-algofit-figma-brief.md) | Figma 디자인 브리프 | ✅ |
-| `17-api-spec.md` (가칭) | 진행 저장, 일일 챌린지, sync API (Phase 2) | **다음** |
-| `18-content-authoring.md` | CSV/스프레드시트 → JSON 변환, QA 체크리스트 | |
-| `19-analytics-events.md` | 학습·리텐션 이벤트 명세 | |
+| [19-content-authoring.md](19-content-authoring.md) | Pick/Blank/시나리오 작성, QA, `content/questions/` | ✅ |
+| `20-api-spec.md` (가칭) | 진행 저장, 일일 챌린지, sync API (Phase 2) | **다음** |
+| `21-analytics-events.md` (가칭) | 학습·리텐션 이벤트 명세 | |
