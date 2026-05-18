@@ -9,7 +9,7 @@
 | `id` | string | yes | 전역 고유 ID, e.g. `pick_arr_001` |
 | `type` | `"pick"` \| `"blank"` \| `"scenario_map"` | yes | 문항 유형 |
 | `version` | integer | yes | 스키마/문항 버전, start at 1 |
-| `language` | string | yes | MVP: `"python"` |
+| `language` | string | yes | 코드 예시 언어: `python` \| `java` \| `javascript` \| `typescript` \| `c` \| `go` \| `kotlin` (Pick은 MVP에서 `python`, Blank는 사용자 설정에 따라 필터) |
 | `stem` | string | yes | 문제 지문 (KO) |
 | `tags` | string[] | yes | 패턴 태그, e.g. `["array"]` |
 | `difficulty` | 1 \| 2 \| 3 | yes | 1=easy, 3=hard |

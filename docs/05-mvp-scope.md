@@ -15,12 +15,12 @@
 
 | 영역 | 내용 |
 |------|------|
-| 콘텐츠 | Pick ~50, Blank ~30 (6패턴) |
+| 콘텐츠 | Pick ~80, Blank ~50 (6패턴, Blank 다언어) |
 | 모드 | Pick, Blank, Level(World1~2), Algorithm(6), Daily |
 | 실전 시나리오 | **Must 제외** — Should v1.0~1.1 (아래) |
 | 게임화 | XP, 스트릭, 하트(기본), 뱃지 5~8개 |
 | 계정 | 게스트 + 진행 **로컬** 저장 (서버 sync는 Phase 2) |
-| 언어 | Python만 (Blank 코드) |
+| 언어 | Blank 코드: 프로필에서 **Python·Java·JavaScript·TypeScript·C·Go·Kotlin** 선택 (기본 Python). Pick 지문은 Python 중심 |
 | 플랫폼 | 모바일 Flutter + PC 웹 React ([18-stack-decision](18-stack-decision.md)) |
 
 ## Should (출시 후 2~4주)
@@ -43,7 +43,7 @@
 | binary_search | 8 | 5 |
 | stack | 9 | 5 |
 | bfs | 9 | 5 |
-| **합계** | **50** | **30** |
+| **합계** | **80+** | **50** (python 30, java/js 각 8, c/go 각 2) |
 
 ## 월드·알고리즘 (Must)
 
