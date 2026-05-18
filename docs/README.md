@@ -39,6 +39,7 @@
 | [18-stack-decision.md](18-stack-decision.md) | ADR: 모바일 Flutter vs PC React 분리 (2026-05-17) |
 | [20-pr-review-setup.md](20-pr-review-setup.md) | 로컬 PR 봇, `PR_REVIEW_CHECK_COMMAND`, 저장소별 검증 |
 | [21-git-workflow.md](21-git-workflow.md) | feature 브랜치, PR, 머지 절차 |
+| [22-testflight-fastlane.md](22-testflight-fastlane.md) | iOS TestFlight · Fastlane `beta` / `build` |
 
 ## 제품 확정 · 디자인
 
@@ -58,6 +59,7 @@
 6. [13-tech-architecture](13-tech-architecture.md) → [18-stack-decision](18-stack-decision.md) → [17-dev-setup](17-dev-setup.md)
 | [20-pr-review-setup.md](20-pr-review-setup.md) | 로컬 PR 봇, `PR_REVIEW_CHECK_COMMAND`, 저장소별 검증 |
 | [21-git-workflow.md](21-git-workflow.md) | feature 브랜치, PR, 머지 절차 |
+| [22-testflight-fastlane.md](22-testflight-fastlane.md) | iOS TestFlight · Fastlane `beta` / `build` |
 7. API 스펙 (다음, 번호 TBD)
 
 ## 다음 문서 권장
