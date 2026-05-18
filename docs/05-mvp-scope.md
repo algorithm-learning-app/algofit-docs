@@ -8,14 +8,14 @@
 | 2 | World 2 셸 (3–5+ 스테이지) | **부분** | 5스테이지(stack/BFS), W1 7클리어 시 언락 |
 | 3 | Algorithm 6종 + 진행 % | **완료** | 카탈로그·상세, `clearedQuestionIds` 기반 |
 | 4 | 복습 탭 (오답 큐) | **완료** | Daily/World 오답 → `wrongQuestionIds` |
-| 5 | bundled pick≥15, blank≥10 | **부분** | 현재 pick 15 / blank 11 (Must 50/30 미달) |
+| 5 | bundled pick≥15, blank≥10 | **완료** | pick 50 / blank 30 (algofit-docs·mobile·web 동기) |
 | 6 | 게스트 world·algorithm 진행 저장 | **완료** | schema v3, SharedPreferences |
 | 7 | PC Daily 풀 동기·시드 | **완료** | [algofit-web#1](https://github.com/algorithm-learning-app/algofit-web/pull/1) |
 | 8 | PC `/continue?token=` | **완료** | guestId ↔ localStorage 브릿지 (MVP) |
 | 9 | PC 홈 모바일 핸드오프 | **완료** | guestId + continue 링크 |
-| 10 | 문서·content 동기 | **부분** | `content/questions` 풀 동기, 본 표 유지 |
+| 10 | 문서·content 동기 | **완료** | `content/questions` pick 50 / blank 30 |
 
-**미완 Must (v1.0 전)**: 콘텐츠 50/30, 뱃지 5–8, World2 10–15스테이지, 서버 동기화, `scenario_map`.
+**미완 Must (v1.0 전)**: 뱃지 5–8, World2 10–15스테이지, 서버 동기화, `scenario_map`.
 
 ---
 
