@@ -26,6 +26,19 @@ content/
 
 **ID 규칙**: `^(pick|blank|scenario)_[a-z0-9_]+$` — 예: `pick_hash_002`, `blank_tp_003`
 
+### Blank `language` (다언어)
+
+| 값 | 용도 |
+|----|------|
+| `python` | 기본·fallback 풀 (최소 30문항 권장) |
+| `java`, `javascript` | 각 8문항 이상 권장 |
+| `c`, `go` | 각 2문항 이상 (MVP 최소) |
+| `typescript`, `kotlin` | UI 선택 가능; 풀 부족 시 Python으로 fallback |
+
+- `codeTemplate`·`blanks[].choices`는 **해당 언어 문법**으로 작성한다.
+- 앱/웹 Daily·스테이지는 `GuestProgress.preferredCodeLanguage`(또는 웹 `algofit:preferredCodeLanguage`)로 Blank만 필터한다.
+- 확장 스크립트: `content/scripts/expand_questions.py` 실행 후 `apps/mobile/assets/data`, `apps/web/src/content`에 동기된다.
+
 ---
 
 ## 2. Pick 문항 작성

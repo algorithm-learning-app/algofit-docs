@@ -90,6 +90,18 @@ bundle exec fastlane beta
 - 브랜치: `feat/fastlane-testflight` → `main` PR.  
 - [algofit-mobile](https://github.com/algorithm-learning-app/algofit-mobile) `scripts/pr-review-check.sh`: `flutter analyze` · `flutter test` (Fastlane은 PR 체크에 포함되지 않음).
 
+## 수출 관리 (Export Compliance)
+
+앱이 **표준 HTTPS/TLS**만 사용하고 자체 암호화·비표준 암호화를 제공하지 않으면, 미국 수출 규정상 **면제(exempt)** 대상입니다.
+
+| 위치 | 설정 |
+|------|------|
+| **Info.plist** (iOS·macOS `Runner`) | `ITSAppUsesNonExemptEncryption` = `false` |
+| **Fastlane** `upload_to_testflight` | `uses_non_exempt_encryption: false` |
+| **App Store Connect** (빌드별 질문) | “앱이 암호화를 사용합니까?” → **아니오** (또는 면제 해당 시 동일 의미) |
+
+빌드 업로드 후 ASC에서 수출 규정 설문이 뜨면, 위 plist·Fastlane 설정과 같이 **비면제 암호화 없음**으로 답하면 됩니다.
+
 ## 보안
 
 - `.p8`, `fastlane/.env`, API 키·앱 전용 암호 **커밋 금지**.  
