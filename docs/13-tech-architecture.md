@@ -204,6 +204,8 @@ flowchart LR
 | **런타임** | `content/manifest.json`에 해시·버전; 앱 `CONTENT_VERSION` 상수와 비교 |
 | **호스팅** | 빌드 산출물과 함께 배포 (별도 CDN 불필요) |
 
+**모바일 (Flutter)**: Daily MVP는 `content/questions/pick.json`·`blank.json`([06-content-schema](06-content-schema.md) 번들 형식)을 `apps/mobile/assets/data/`에 동기화해 번들한다. 앱은 풀에서 **서울 달력일 시드**로 pick 3 + blank 2를 결정론적으로 뽑는다.
+
 ```json
 {
   "version": 1,
