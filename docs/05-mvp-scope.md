@@ -6,7 +6,8 @@
 |------|-----|
 | **완료일** | 2026-05-19 (KST) |
 | **Must 표** | 아래 구현 상태 표 — 전 항목 ✅ |
-| **검증** | `algofit-mobile`: `flutter analyze` · `flutter test` · `algofit-web`: `npm run build` · `algofit-docs`: `scripts/pr-review-check.sh` |
+| **검증** | `algofit-mobile`: `flutter analyze` · `flutter test` · `algofit-web`: `npm run build` · `npm test` · `algofit-docs`: `scripts/pr-review-check.sh` |
+| **정책** | Daily 챌린지는 하트 미소모 ([04-gamification](04-gamification.md), [14-learning-flow](14-learning-flow.md)) — 2026-05-19 수정 반영 |
 
 ---
 
