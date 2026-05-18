@@ -7,6 +7,10 @@
 
 앱 구현: [algofit-mobile](https://github.com/algorithm-learning-app/algofit-mobile) · [algofit-web](https://github.com/algorithm-learning-app/algofit-web)
 
+## MVP 상태 (2026-05-19)
+
+**Must 완료** — [docs/05-mvp-scope.md](docs/05-mvp-scope.md) · `content/questions` pick 50 / blank 30
+
 ## PR 리뷰 (로컬 봇)
 
 변경은 보통 `main`에 직접 푸시합니다. PR을 열었을 때:
