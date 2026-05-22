@@ -47,7 +47,7 @@ Figma 페이지 예: `Mobile` / `PC`
 | `01_Home` | Daily 카드, 스트릭·하트·XP, 월드 요약, 이어하기 |
 | `02_Daily_Pick` | 오늘 5문항 중 Pick UI, ProgressDots |
 | `03_Feedback_Correct` | 정답 오버레이 + 마스코트 happy |
-| `04_Daily_Complete` | 5/5 완료, 스트릭 갱신, 세션 요약 CTA |
+| `04_Daily_Complete` | 5문항 완료, 스트릭 +1, 5/5 만점이면 보너스 강조 |
 | `05_World_Map` | World 노드 맵, 잠금/클리어 상태 |
 | `PC_Bonus` | PC 전용 보너스 미션 (모바일 핵심 루프 아님) |
 
@@ -110,7 +110,7 @@ Figma 페이지 예: `Mobile` / `PC`
 ### `01_Home`
 
 - 상단: `StreakBadge` + `Heart` + XP 바(골드 `#FBBF24`)
-- 중앙: `Card/Daily` (오늘 5문항, 5/5 스트릭 조건 안내 한 줄)
+- 중앙: `Card/Daily` (오늘 5문항, "5문제 완료 시 스트릭" 한 줄 안내)
 - 하단: World 맵 썸네일 → `05_World_Map` 링크
 - 마스코트 `neutral` — Daily 카드 옆 또는 빈 상태일 때
 
@@ -127,7 +127,8 @@ Figma 페이지 예: `Mobile` / `PC`
 
 ### `04_Daily_Complete`
 
-- “오늘 5/5 완료!” + 스트릭 +1 애니메이션(프로토타입 optional)
+- 5문항 완료 시: "오늘도 완료!" 헤드라인 + 🔥 스트릭 +1 강조
+- 5/5 만점이면 "완벽한 하루!" + 💯 + 보너스 XP 표시 (애니메이션 optional)
 - XP 합산, `Button/Primary` → 홈
 
 ### `05_World_Map`
@@ -159,4 +160,4 @@ Figma 페이지 예: `Mobile` / `PC`
 | [14-learning-flow.md](14-learning-flow.md) | 학습·플랫폼·스트릭 규칙 |
 | [15-figma-mcp-setup.md](15-figma-mcp-setup.md) | MCP 설치 |
 | [09-ia-screens.md](09-ia-screens.md) | 화면 ID |
-| [04-gamification.md](04-gamification.md) | XP·하트 (스트릭 상세는 14에서 5/5 정답 기준) |
+| [04-gamification.md](04-gamification.md) | XP·하트·스트릭 (스트릭 = Daily 완료 / 5/5 만점은 보너스) |

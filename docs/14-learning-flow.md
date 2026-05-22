@@ -29,12 +29,13 @@ flowchart LR
   subgraph mobile [모바일 - 핵심]
     H[Home] --> D[Daily 5문항]
     D --> F[피드백]
-    F --> C{5/5 전부 정답?}
+    F --> C{5문항 완료?}
     C -->|예| S[스트릭 +1]
-    C -->|아니오| R[스트릭 미갱신]
+    C --> P{5/5 만점?}
+    P -->|예| B1[+20 XP 보너스 & perfect_daily 뱃지]
   end
   subgraph pc [PC 웹 - 보너스]
-    B[PC_Bonus 미션]
+    BP[PC_Bonus 미션]
   end
   mobile -.->|선택| pc
 ```
@@ -46,11 +47,12 @@ flowchart LR
 | 규칙 | 협의 확정 |
 |------|-----------|
 | 일일 세트 | **5문항** (Pick/Blank 혼합 가능) |
-| 스트릭 인정 | 해당 로컬 날짜에 **5문항 모두 정답** (5/5) |
-| 부분 완료 | 진행·XP는 기록 가능, **스트릭은 갱신 안 됨** |
+| **스트릭 인정** | 해당 로컬 날짜에 **5문항 응답 완료** (정답률 무관) |
+| 만점 보상 | 5/5 정답 시 `perfect_daily` 뱃지 + **+20 XP 보너스** |
+| 부분 완료 | 5문항을 다 풀면 스트릭 인정. 도중에 그만두면 미갱신 |
 | 하트 | Daily는 하트 소모 없음 ([04-gamification.md](04-gamification.md)) |
 
-> 참고: [04-gamification.md](04-gamification.md) 초안에는 “Daily challenge 완료”만 적혀 있을 수 있음. 구현·Figma 카피는 **5/5 정답** 기준으로 통일합니다.
+> **설계 의도**: 스트릭은 "꾸준함" 보상, 만점은 "도전 성취" 보상 — 분리해서 운영합니다. 1문제만 맞아도 끝까지 풀면 스트릭이 유지되어 학습 좌절을 줄입니다. ([02-core-learning-loop.md](02-core-learning-loop.md) "실패 비용 낮음" 원칙과 정렬)
 
 ---
 
@@ -71,7 +73,7 @@ Figma 프레임: [16-algofit-figma-brief.md](16-algofit-figma-brief.md) (`01_Hom
 | 요소 | 동작 |
 |------|------|
 | XP | 문항·세션·일일 완료 보너스 ([04-gamification.md](04-gamification.md)) |
-| 스트릭 | 5/5 Daily 정답 시 +1, 자정 미충족 시 리셋 |
+| 스트릭 | Daily 5문항 완료 시 +1 (정답률 무관), 자정 미충족 시 리셋. 만점은 별도 뱃지·보너스 |
 | 하트 | Level/Algorithm 오답 시 소모, Daily 무관 |
 | 맵 | World 1~2 노드 — `05_World_Map` |
 

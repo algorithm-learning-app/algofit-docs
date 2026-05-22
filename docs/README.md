@@ -38,6 +38,7 @@
 | [17-dev-setup.md](17-dev-setup.md) | 로컬 실행 (Flutter / Vite), Figma 참고 |
 | [18-stack-decision.md](18-stack-decision.md) | ADR: 모바일 Flutter vs PC React 분리 (2026-05-17) |
 | [20-pr-review-setup.md](20-pr-review-setup.md) | 로컬 PR 봇, `PR_REVIEW_CHECK_COMMAND`, 저장소별 검증 |
+| [23-github-app-review-bot.md](23-github-app-review-bot.md) | GitHub App 봇 인증 (`~/.githubbots/`) |
 | [21-git-workflow.md](21-git-workflow.md) | feature 브랜치, PR, 머지 절차 |
 | [22-testflight-fastlane.md](22-testflight-fastlane.md) | iOS TestFlight · Fastlane `beta` / `build` |
 
@@ -45,7 +46,7 @@
 
 | 문서 | 한 줄 설명 |
 |------|------------|
-| [14-learning-flow.md](14-learning-flow.md) | 알고핏·플랫폼 B·5/5 스트릭·PC 보너스·게임 톤 (협의 확정) |
+| [14-learning-flow.md](14-learning-flow.md) | 알고핏·플랫폼 B·스트릭(완료 기준)·PC 보너스·게임 톤 (협의 확정) |
 | [15-figma-mcp-setup.md](15-figma-mcp-setup.md) | Cursor ↔ Figma MCP (Remote 권장, Desktop·레거시 대안) |
 | [16-algofit-figma-brief.md](16-algofit-figma-brief.md) | Figma 토큰·프레임·컴포넌트·마스코트 배치 브리프 |
 
@@ -57,10 +58,8 @@
 4. [09-ia-screens](09-ia-screens.md) → [07-curriculum-world-1](07-curriculum-world-1.md)
 5. [14-learning-flow](14-learning-flow.md) → [16-algofit-figma-brief](16-algofit-figma-brief.md) (UI)
 6. [13-tech-architecture](13-tech-architecture.md) → [18-stack-decision](18-stack-decision.md) → [17-dev-setup](17-dev-setup.md)
-| [20-pr-review-setup.md](20-pr-review-setup.md) | 로컬 PR 봇, `PR_REVIEW_CHECK_COMMAND`, 저장소별 검증 |
-| [21-git-workflow.md](21-git-workflow.md) | feature 브랜치, PR, 머지 절차 |
-| [22-testflight-fastlane.md](22-testflight-fastlane.md) | iOS TestFlight · Fastlane `beta` / `build` |
-7. API 스펙 (다음, 번호 TBD)
+7. [20-pr-review-setup](20-pr-review-setup.md) → [23-github-app-review-bot](23-github-app-review-bot.md) → [21-git-workflow](21-git-workflow.md)
+8. API 스펙 (다음, 번호 TBD)
 
 ## 다음 문서 권장
 

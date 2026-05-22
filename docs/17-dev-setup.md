@@ -66,4 +66,4 @@ npm run dev
 | `/daily/:step/feedback` | 문항별 피드백 |
 | `/daily/complete` | 5문항 종료·스트릭 결과 |
 
-홈 **이어하기** → `/daily`. 5/5 전부 정답 시 `localStorage` 스트릭 +1 (Asia/Seoul 날짜 기준, 같은 날 중복 갱신 없음).
+홈 **이어하기** → `/daily`. **5문항 완료** 시 `localStorage` 스트릭 +1 (Asia/Seoul 날짜 기준, 같은 날 중복 갱신 없음). 5/5 정답이면 +20 XP 보너스와 `perfect_daily` 뱃지가 함께 지급됩니다.
